@@ -11,3 +11,6 @@ rtc:
   worker_count:
     value: 4
     type: int
+
+database:
+  secretName: souptask-db
