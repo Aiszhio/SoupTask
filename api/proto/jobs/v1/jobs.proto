@@ -24,14 +24,12 @@ enum JobStatus {
 
 message Job {
   string id = 1;
-  string type = 2;
-  JobStatus status = 3;
+  JobStatus status = 2;
 }
 
 message CreateJobRequest {
   string idempotency_key = 1;
-  string type = 2;
-  google.protobuf.Struct payload = 3;
+  google.protobuf.Struct payload = 2;
 }
 
 message CreateJobResponse {
@@ -63,4 +61,3 @@ message CancelJobRequest {
 message CancelJobResponse {
   Job job = 1;
 }
-

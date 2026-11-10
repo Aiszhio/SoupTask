@@ -1,8 +1,11 @@
 package jobs
 
-import jobsv1 "SoupWebApplication/pkg/api/jobs/v1"
+import "context"
 
-// Service exposes the API skeleton until job processing is implemented.
-type Service struct {
-	jobsv1.UnimplementedJobServiceServer
+// Store - reads and changes jobs in persistent storage
+type Store interface {
+	Create(ctx context.Context, key string, payload []byte) (Job, error)
+	Get(ctx context.Context, id int64) (Job, error)
+	List(ctx context.Context, page Page) ([]Job, bool, error)
+	Cancel(ctx context.Context, id int64) (Job, error)
 }
