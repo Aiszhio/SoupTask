@@ -1,0 +1,13 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: deploy/docker/Dockerfile
+    env_file: .env
+    environment:
+      HTTP_ADDR: "0.0.0.0:8080"
+      GRPC_ADDR: "0.0.0.0:9090"
+    ports:
+      - "127.0.0.1:8080:8080"
+      - "127.0.0.1:9090:9090"
+

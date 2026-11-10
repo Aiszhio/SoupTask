@@ -1,0 +1,13 @@
+replicaCount: 1
+image:
+  repository: souptask
+  tag: latest
+  pullPolicy: IfNotPresent
+service:
+  type: ClusterIP
+  httpPort: 8080
+  grpcPort: 9090
+rtc:
+  worker_count:
+    value: 4
+    type: int
