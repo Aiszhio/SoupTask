@@ -1,0 +1,1 @@
+run=load-20261111T124434437008 target_rps=100 requests=6000 actual_send_rps=100.0 elapsed_s=60.0 http_200=6000 errors=0 p50_ms=2.81 p95_ms=3.94 p99_ms=6.65 final_queue=[60.29, '6000', '5064', '8', '928', '0']
